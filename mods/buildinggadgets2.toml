@@ -31,6 +31,30 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-24"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "3aea36e6258ad79569b1b0846ab05e03c201286de8ac03ee03555cf9a02d29f8"
+changelog = """This version gives the Copy Paste gadget its Copy-mode plan: it now reports which cells would be copied without copying them, placing nothing and removing nothing, in the same held shape as the destruction and exchange plans. The shipped item is gadget_copy_paste, which is what the jar calls it; the Java class name and the shortened name in the brief appear in no jar file, and the difference is recorded. The plan keeps the three reference rules the pin can query — air, unbreakable by destroy speed and the deny tag — with the render-block line still blocked, and reuses the shared layer planner rather than a fourth implementation. Proven on the count pair: a piston head and bedrock in the layer leave one eligible cell, two ordinary stones leave three, and every earlier plan stays green in the same leg while the inverted assertion swaps both counts and fails."""
+
+[[versions]]
+version = "0.2.8"
+published = "2026-11-24"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "bcbc948a8a4c74628757dc96f67e8fce4118ba7ae7e448f7c13dca21ccdbd69e"
+changelog = """This version gives the exchange gadget a destination plan, the other consumer of the deny tag the earlier slice carried. Two of the brief's names were wrong and the artefact settled both: the shipped item is gadget_exchanging, while GadgetExchanger is the Java class, and the plan's rules come from the reference's isExchangingValid and isValidBlockState rather than a generic layer copy. Proven on the counts that can fail: with a piston head and bedrock in the planned layer only one cell is eligible; with two ordinary stones three are; nothing is placed or removed in either case because the write stays held. The older destruction plan and both deny-tag legs remain green, and the inverted assertion fails at the count it should have produced. The render-block line stays blocked because this build has no block-class query."""
+
+[[versions]]
+version = "0.2.7"
+published = "2026-11-24"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "a506d017e78f5e05781ad68870836e7c9d39dc044b00f4a5522ef3948146e81f"
+changelog = """This version gives the destruction gadget a destination plan: sneak-clicking a block now reports which cells would be destroyed without removing any of them, which is the shape the building gadget's held placement already uses. Three of the reference's four refusal rules are carried at this pin — air, an unbreakable block by its destroy speed, and a member of the deny tag the previous version added — and the fourth is recorded as blocked because this build exposes no block-class query for a render block, and no render block is placed here. Proven on the counts that matter: a piston head and a bedrock inside the planned layer leave one cell, while two ordinary stones leave three, with nothing removed in either case; a wrong-held-item control refuses the gadget entirely and the inverted assertion fails as it must. The deny tag's other consumer, the exchange gadget, is now the natural next slice."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-23"
 game = "26.3"

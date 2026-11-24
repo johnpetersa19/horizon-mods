@@ -34,6 +34,22 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "41c3456e743ad4cf85d68812a086532f1afc0429cb0c1033f1bbcc415f90a225"
+changelog = """This version finishes the side config, the last half of the machine control gap: each face now stores its own transfer type rather than a boolean, with the four types and their order read from the reference. The defaults are not uniform and are carried as the jar has them — cells, hoppers, transmitters and ender machines start at all on every face, while furnators, solar panels and dischargers start at extract, and the orb and cable have no side config at all. Proven on a cell whose north face was set to none: the sink stayed at zero across twenty ticks while the south face delivered exactly five hundred energy a tick, the two stores conserved to a round million, and flipping the face back resumed charging. The full replay reached this slice with every earlier phase green, then false-failed on a harness regex that demanded a space before the comma-separated fields; that run was discarded and the verdict came from bounded legs."""
+
+[[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "f954aa9099f1ab550176602d406c1a71cba78fde765f881a65c75e58206cbd40"
+changelog = """This version finishes the comparator family: the energizing orb now answers with the number of non-empty stacks in its seven slots, capped at fifteen, and a rod answers with its own buffer fraction, which the machine already computed. A cable still answers nothing because it stores nothing, and giving it a signal would only have made the family look complete. The orb's reading is a count, not a charge fraction, which is the part a generic implementation would have got wrong. Proven at the wire rather than at a block, because a comparator has no block entity here: three blaze powder in the orb reads three, a full rod reads fifteen, a half-full rod reads seven, and a cable beside a full chest reads nothing while the chest itself reads one. The inverted orb assertion fails at the count it should have produced, so the leg cannot pass vacuously."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-23"
 game = "26.3"

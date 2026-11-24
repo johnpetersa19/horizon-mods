@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "c584f8ebbf5c46fc1bd318bac89bb0ec507206a1e96ee02acb01354accb64d98"
+changelog = """This version adds the breaker module, which takes a block in front of the router and moves its drops into the buffer. Its rules come from the reference and several are easy to flatten wrongly: an empty amount means unlimited, otherwise the buffer must be below the regulator amount; a stick is a stone-tier tool and cannot take diamond ore, while an iron pickaxe can; glass breaks with no drops under the default blacklist but not under a non-empty whitelist; and a block filter tests the block item while an item filter tests the drops, so the two behave differently on the same stone. Proven across ten rigs covering each of those cases, with a fresh in-game red on the shipped previous package where the module id was unknown. The harvest-tier tag is written from the tool the module carries rather than guessed."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-23"
 game = "26.3"

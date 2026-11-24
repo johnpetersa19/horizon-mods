@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-24"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "08d5c4773800c0b68f9fb29f599691451bb770455ac2b4e6a59db5c0defba411"
+changelog = """This version gives the crafter as many targets as the reference has pattern slots, each with its own band, batch size and status, all round-tripping through the machine's saved compound. The jar's own field layout is carried — forty-five patterns with a minimum, maximum, batch and status each — and the forty-sixth is refused rather than silently truncating. Proven with two targets at different bands: the readout names both and consumes their separate stocks, while the same machine with one cell pressed keeps only one entry. The eight upgrade slots remain blocked on the parent's addon surface, and all earlier selftests still fail at their own inverted assertions."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-23"
 game = "26.3"

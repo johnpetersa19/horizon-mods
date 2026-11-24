@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-24"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "c6cbc620b6602c5023dac07ce4a362bc94bbf103699c632d2a65d6c78a878955"
+changelog = """This version draws the accumulator's gauge, which the reference renders on all four horizontal faces with a needle that turns opposite to its fill. The geometry is measured from the jar's model partials rather than eyeballed: the pivot, the axis, the four quads and the cyan needle colour all come from the artefact, and the screenshot box is the gauge's rather than the block's. Proven by counting coloured pixels at two fills: an empty gauge puts most of its needle below the middle row, a full one above it, with the means matching the reference's cyan. A negative run with the accumulator removed found a stale-gauge cache bug in the port and fixed it, so a block that is gone no longer leaves a needle behind. No new mixin was added — the two existing rows are unchanged."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-23"
 game = "26.3"
