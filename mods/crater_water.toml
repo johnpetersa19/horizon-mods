@@ -1,0 +1,29 @@
+id = "crater_water"
+kind = "native-mod"
+name = "Crater Water"
+summary = "Realistic volumetric water physics that flows down, fills craters bottom-up, and levels lakes."
+description = """
+A native Rust mod for Minecraft Horizon (26.3) implementing **realistic volumetric water physics** (discrete levels 1–8):
+
+- **Gravity-first & bottom-up filling:** Water falls vertically before spreading horizontally, equalizes pressure across enclosed basins, and levels surfaces into flat lakes.
+- **Finite Mode (default):** Strictly conserves total water volume and disables 2x2 infinite water source formation on player-managed water.
+- **Spring Mode (`/craterwater spring`):** Player-placed water acts as a continuous spring, rising layer by layer inside enclosed craters and stopping automatically at the crater rim (bounded by a configurable `spring_max_blocks` safety cap).
+- **Natural Spring Bed Recipe:** Prepare a crater floor or mountain source with **gravel, sand, or red sand** paired with **stone** (`stone`, `cobblestone`, `deepslate`, `sandstone`, `andesite`, `granite`, `diorite`, `tuff`, etc.) and pour water on top to create a natural spring even in Finite mode.
+- **Ocean & TPS Protection:** Untouched natural oceans and rivers remain dormant; simulation only activates around player perturbations and respects a configurable `max_updates_per_tick` budget (default `256`).
+- **In-game Configuration:** Configurable via **Options > Mods > Crater Water > Config**, `config/crater_water.json`, and `/craterwater finite | spring | status | clear`.
+"""
+authors = ["johnpetersa19"]
+owners = ["johnpetersa19"]
+license = "MIT"
+source = "https://github.com/johnpetersa19/starling"
+icon = "icons/crater_water.png"
+categories = ["gameplay"]
+tags = ["water", "physics", "fluids", "simulation"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-23"
+game = "26.3"
+file = "crater_water.hmod"
+sha256 = "204cfb26b01d1529571bccaaf534f2f40f2ee05f864203b7b27359aeac34a058"
+changelog = "Initial release: volumetric water physics, finite/spring modes, and natural spring bed recipe."
